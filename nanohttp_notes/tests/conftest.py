@@ -2,6 +2,7 @@ import pytest
 
 from restiro import clean_examples_dir
 from restiro.middlewares.webtest import TestApp
+
 from nanohttp import configure
 
 from nanohttp_notes.application import DemoApplication
@@ -13,5 +14,5 @@ def app():
     configure(force=True)
 
     clean_examples_dir()
-    test_app = TestApp(app=wsgi_app)
+    test_app = TestApp(app=wsgi_app, lint=False)
     yield test_app
