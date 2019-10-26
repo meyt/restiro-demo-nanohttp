@@ -1,4 +1,4 @@
-wetbtest
+webtest
 restiro
 restiro-spa-material
 pytest
